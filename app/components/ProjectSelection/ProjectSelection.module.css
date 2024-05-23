@@ -1,0 +1,119 @@
+/*Buttons Section */
+.btnContainer{
+    display: flex;
+    gap: 10px;
+    /*Moves buttons onto next line*/
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+}
+
+.btn{
+    width: 110px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--btn-text-color);
+    background-color: var(--btn-background-color);
+    border: 3px solid var(--btn-border-color);
+}
+
+.btn:hover{
+    color: var(--btn-text-color-hover);
+    background-color: var(--btn-background-color-hover);
+    border: 3px solid var(--btn-border-color-hover);
+}
+
+/*Card Section*/
+.cardLink{
+    text-decoration: none;
+}
+
+.cardsContainer{
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 0 0;
+}
+
+.card{
+    display: grid;
+    /*Sets row heights for each card - title, image, description*/
+    grid-template-rows: 4rem auto 3rem;
+    grid-template-areas: 
+        "cardHeader"
+        "cardImg"
+        "cardText"
+    ;
+    gap: 20px;
+    border: 1px solid var(--background-border-color);
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.cardHeader{
+    grid-area: cardHeader;
+    color: var(--text-color-dark);
+}
+
+.cardImg{
+    grid-area: cardImg;
+    width: 100%;
+}
+
+.cardText{
+    grid-area: cardText;
+    color: var(--text-color);
+}
+
+/*Responsive - Media Queries*/
+@media screen and (min-width: 0) and (max-width: 480px){
+    .btnContainer{
+        /*Aligns buttons to center of the page*/
+        justify-content: center;
+    }
+    .cardsContainer{
+        /*Displays 1 card per row*/
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .btnContainer{
+        justify-content: center;
+    }
+    .cardsContainer{
+        grid-template-columns: 1fr; 
+    }
+}
+  
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .cardsContainer{
+        /*Displays 2 cards per row*/
+        grid-template-columns: 1fr 1fr; 
+    }
+    .btnContainer{
+        /*Aligns buttons to left of the page (start of flex)*/
+        justify-content: start;
+    }
+}
+  
+@media screen and (min-width: 1201px) and (max-width: 1800px){
+    .cardsContainer{
+        /*Displays 3 cards per row*/
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .btnContainer{
+        justify-content: start;
+    }
+}
+  
+@media screen and (min-width: 1801px){
+    .cardsContainer{
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .btnContainer{
+        justify-content: start;
+    }
+}

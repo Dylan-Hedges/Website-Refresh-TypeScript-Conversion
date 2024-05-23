@@ -1,0 +1,111 @@
+* {
+  /*Includes border & padding in width & height calculation*/
+  box-sizing: border-box;
+  /*Removes default padding for all elements*/
+  padding: 0;
+  /*Removes default margin for ll elements*/
+  margin: 0;
+  /*Defines CSS Variables - accessible to all elements*/
+  --text-color: #1F2933;
+  --text-color-dark: #000000;
+  --background-border-color: #F8FAFC;
+  --background-light-grey: #F8FAFC;
+  --background-white: #FFFFFF;
+  --footer-text-color: #FFFFFF;
+  --btn-text-color: #000000;
+  --btn-background-color: #FFFFFF;
+  --btn-border-color: #000000;
+  --btn-text-color-hover: #FFFFFF;
+  --btn-background-color-hover: #000000;
+  --btn-border-color-hover: #FFFFFF;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html{
+  /*Root font size*/
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2rem; /* 32px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+}
+
+h6, p, a {
+  font-size: 1rem; /* 16px */
+}
+
+/*Content container - Outer container*/
+.content-container{
+  margin: 85px 0 45px 0;
+  display: grid;
+  grid-template-areas: ". content .";
+}
+
+.content-item{
+  grid-area: content;
+}
+
+/*Footer container - Outer container*/
+.footer-container{
+  background-color: #1b1b1b;
+  display: grid;
+  grid-template-areas: ". footer .";
+}
+
+.footer-item{
+  grid-area: footer;
+}
+
+
+/*Responsive - Media Queries*/
+@media screen and (min-width: 0) and (max-width: 480px){
+  .content-container, .footer-container{
+    grid-template-columns: 2% 96% 2%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+  .content-container, .footer-container{
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+  .content-container, .footer-container{
+    grid-template-columns: 8% 84% 8%;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1800px){
+  .content-container, .footer-container{
+    grid-template-columns: 20% 60% 20%;
+  }
+}
+
+@media screen and (min-width: 1801px){
+  .content-container, .footer-container{
+    grid-template-columns: 25% 50% 25%;
+  }
+}
+

@@ -1,0 +1,35 @@
+.introContainer{
+    padding: 60px 0 30px 0;
+}
+
+
+/*Responsive - Media Queries*/
+@media screen and (min-width: 0) and (max-width: 480px){
+    .introContainer{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .introContainer{
+        text-align: center;
+    }
+}
+  
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .introContainer{
+        text-align: left;
+    }
+}
+  
+@media screen and (min-width: 1201px) and (max-width: 1800px){
+    .introContainer{
+        text-align: left;
+    }
+}
+  
+@media screen and (min-width: 1801px){
+    .introContainer{
+        text-align: left;
+    }
+}

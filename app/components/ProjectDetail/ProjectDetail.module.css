@@ -1,0 +1,84 @@
+/*Container*/
+.projectContainer{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    ". header ."
+    ". thumbImg ."
+    ". icons ."
+    ". bulletList ."
+    ;
+}
+
+/*Header*/
+.header{
+    grid-area: header;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+/*Image*/
+.thumbImg{
+    grid-area: thumbImg;
+}
+
+.thumbImg img{
+    width: 100%;
+}
+
+/*Icons*/
+.icons{
+    grid-area: icons;
+}
+
+.icons img{
+    height: 50px;
+    margin: 10px 5px 10px 0;
+}
+
+/*Bullets*/
+.bulletList{
+    grid-area: bulletList;
+    background-color: var(--background-light-grey);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bulletList ul{
+    list-style-type: none;
+}
+
+.bulletList ul li{
+    padding: 15px 0 0 0;
+}
+
+/*Responsive - Media Queries*/
+@media screen and (min-width: 0) and (max-width: 480px){
+    .projectContainer{
+        grid-template-columns: 0 1fr 0;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+    .projectContainer{
+        grid-template-columns: 0 1fr 0;
+    }
+}
+  
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .projectContainer{
+        grid-template-columns: 10fr 80fr 10fr;
+    }
+}
+  
+@media screen and (min-width: 1201px) and (max-width: 1800px){
+    .projectContainer{
+        grid-template-columns: 10fr 80fr 10fr;
+    }
+}
+  
+@media screen and (min-width: 1801px){
+    .projectContainer{
+        grid-template-columns: 10fr 80fr 10fr;
+    }
+}
