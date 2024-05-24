@@ -1,18 +1,23 @@
 import Link from 'next/link';
 import styles from './ProjectDetail.module.css';
+import IProjectsData from '../ProjectSelection/IProjectsData';
 
-export default function ProjectCard(props){
-    const name = props.projectInfo.title;
-    const image = props.projectInfo.image;
-    const projectURL = props.projectInfo.projectURL;
-    const bullets = props.projectInfo.bullets;
-    const gitHubURL = props.projectInfo.gitHubURL;
+//TypeScript interface, used for ProjectCard props.projectInfo, must have a property called 'projectInfo' and the value of this property must conform to the structure defined by the IProjectsData interface (see IProjectsData.ts)
+interface IProjectInfo {
+    projectInfo: IProjectsData;
+}
+
+//Page Detail Function - {projectInfo}: IProjectInfo, TypeScript, saves props.projectInfo to projectInfo (destructuring), checks 'projectInfo' aheres to the 'IProjectInfo' interface. 'IProjectInfo' interface specifies the object must have a 'projectInfo' property and its value must conform to the structure defined by the 'IProjectsData' interface.
+export default function ProjectCard({projectInfo}: IProjectInfo){
+    
+    //Saves values from props.projectInfo
+    const { title, image, projectURL, bullets, gitHubURL } = projectInfo;
 
     return(
         <div className={styles.projectContainer}>
             {/*Header*/}
             <div className={styles.header}>
-                <h1>{name}</h1>
+                <h1>{title}</h1>
             </div>
             {/*Image*/}
             <div className={styles.thumbImg}>
@@ -26,7 +31,7 @@ export default function ProjectCard(props){
             {/*Bullets*/}
             <div className={styles.bulletList}>
                 <ul className={styles.ul}>
-                    {bullets.map((bullet)=>{
+                    {bullets.map((bullet: string)=>{
                         return <li className={styles.li} key={bullet}>{bullet}</li>
                     })
                     }
