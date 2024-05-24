@@ -12,8 +12,8 @@ import Link from 'next/link';
 export default function ProjectSelection() : JSX.Element{
     //State that keeps track of current tag
     const [tag, setTag] = useState('All');
-    //State that keeps track of projects to show on screen - <IProjectsData[]>, TypeScript, checks that 'projectsData' is an array of objects that adhere to the 'IProjectsData' TypeScript interface, ensures 'currentProjects' will always be an array of 'IProjectsData' objects, provides type safety.
-    const [currentProjects, setProjects] = useState<IProjectsData[]>(projectsData);
+    //State that keeps track of projects to show on screen 
+    const [currentProjects, setProjects] = useState(projectsData);
 
     //Hook that runs everytime there is a change to the tag state
     useEffect(() => {
@@ -24,6 +24,7 @@ export default function ProjectSelection() : JSX.Element{
         setProjects(filteredProjects);
     }, [tag]); 
 
+    //On click updates selected button tag - TypeScript, tag must be type String
     const handleClick = (newTag: string) =>{
         //Updates the tag state with a new tag
         setTag(newTag);

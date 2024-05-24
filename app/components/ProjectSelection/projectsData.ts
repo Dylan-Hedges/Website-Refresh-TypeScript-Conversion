@@ -1,5 +1,8 @@
-//Data for pojects - displayed on Potfolio page
-export const projectsData = [
+//Imports TypeScript interface for projectsData - defines projectsData data types
+import IProjectsData from './IProjectsData';
+
+//Data for pojects - displayed in Project Selection Component - IProjectsData[], TypeScript, checks that 'projectsData' is an array of objects that adhere to the 'IProjectsData' TypeScript interface, ensures 'currentProjects' will always be an array of 'IProjectsData' objects, provides type safety.
+export const projectsData: IProjectsData[] = [
     {
       id: 1,
       title: "Portfolio Website",
