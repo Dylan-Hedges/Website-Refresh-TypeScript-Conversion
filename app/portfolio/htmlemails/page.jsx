@@ -1,5 +1,5 @@
 import ProjectCard from "../../components/ProjectDetail/ProjectDetail";
-import { projectsData } from '../../components/ProjectSelection/projectsData.js';
+import { projectsData } from '../../components/ProjectSelection/projectsData';
 
 export default function HTMLEmails() {
     //Defines which project to show

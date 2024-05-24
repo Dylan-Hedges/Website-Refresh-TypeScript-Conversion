@@ -1,5 +1,5 @@
 import ProjectCard from "../../components/ProjectDetail/ProjectDetail";
-import { projectsData } from '../../components/ProjectSelection/projectsData.js';
+import { projectsData } from '../../components/ProjectSelection/projectsData';
 
 export default function EverydayHomes() {
     //Defines which project to show

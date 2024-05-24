@@ -1,28 +1,30 @@
 //Renders component on the client side/browser - use for components with interactivity
 "use client";
 import React, { useState, useEffect } from 'react';
-import { projectsData } from './projectsData.js';
-import styles from './ProjectSelection.module.css';
+//Imports projects data
+import { projectsData } from './projectsData';
+//Imports TypeScript interface for projectsData - defines projectsData data types
+import IProjectsData from './IProjectsData';
+import styles from './ProjectSelection.module.css'; 
 import Link from 'next/link';
 
-
-//Project Selection Component
-export default function ProjectSelection(){
+//Project Selection Component - JSX.Element, TypeScript, ensures component returns a JSX element
+export default function ProjectSelection() : JSX.Element{
     //State that keeps track of current tag
     const [tag, setTag] = useState('All');
-    //State that keeps track of projects to show on screen
-    const [currentProjects, setProjects] = useState(projectsData);
+    //State that keeps track of projects to show on screen - <IProjectsData[]>, TypeScript, checks that 'projectsData' is an array of objects that adhere to the 'IProjectsData' TypeScript interface, ensures 'currentProjects' will always be an array of 'IProjectsData' objects, provides type safety.
+    const [currentProjects, setProjects] = useState<IProjectsData[]>(projectsData);
 
     //Hook that runs everytime there is a change to the tag state
     useEffect(() => {
-        //Filter that only returns project which have the current tag 
-        const filteredProjects = projectsData.filter((project) => {
+        //Filter that only returns project which have the current tag - (project: IProjectsData), TypeScript, checks each individual 'project' (object) adheres to the 'IProjectsData' interface (object), ensures type safety.
+        const filteredProjects = projectsData.filter((project: IProjectsData) => {
             return project.tag.includes(tag)
         })
         setProjects(filteredProjects);
     }, [tag]); 
 
-    const handleClick = (newTag) =>{
+    const handleClick = (newTag: string) =>{
         //Updates the tag state with a new tag
         setTag(newTag);
     }
