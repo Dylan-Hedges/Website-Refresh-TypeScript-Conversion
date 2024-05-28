@@ -17,8 +17,13 @@ export const metadata = {
   description: 'Portfolio website for Dylan Hedges',
 }
 
-//Layout component - wraps around all components/pages - apply navbar and footer components here, {children} = the page curently being viewed in the browser  (e.g. About), {children} changes whenw e navigate to different pages
-export default function RootLayout({ children }) {
+//TypeScript, defines the props for the RootLayout component, specifying that it expects children props, which is a ReactNode (a type in React that represents anything that can be rendered e.g. a React JSX element <div>, strings, numbers)
+interface RootLayoutProps {
+  children: React.ReactNode; 
+}
+
+//Layout component - wraps around all components/pages - apply navbar and footer components here, {children} = the page curently being viewed in the browser  (e.g. About), {children} changes when we navigate to different pages. RootLayoutProps, TypeScript, specifies that the object being destructured should conform to the RootLayoutProps interface
+export default function RootLayout({ children }: RootLayoutProps) {
   //<body> contains the children/page currently being viewed
   return (
     <html lang="en">
