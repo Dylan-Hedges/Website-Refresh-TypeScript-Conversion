@@ -4,8 +4,8 @@ import './globals.css'
 import {Rubik} from 'next/font/google'
 
 //==Component Imports==
-import Navbar from './components/Navbar/Navbar.jsx'
-import Footer from './components/Footer/Footer.jsx'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
 
 //Configures the imported Google font, applied to <Body> as a class - In this case only downloads/uses latin characters, here can specify font weight etc, fonts are self-hosted on your domain so it doesnt need to make requests to Google Fonts for the font

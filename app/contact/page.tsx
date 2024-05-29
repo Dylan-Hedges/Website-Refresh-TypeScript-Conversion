@@ -1,4 +1,4 @@
-import TypingAnimation from ".././components/TypingAnimation/TypingAnimation.jsx";
+import TypingAnimation from ".././components/TypingAnimation/TypingAnimation";
 import styles from './page.module.css';
 import Link from 'next/link';
 

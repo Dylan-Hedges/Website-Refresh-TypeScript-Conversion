@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import TypingAnimation from ".././components/TypingAnimation/TypingAnimation.jsx";
-import SkillsBanner from ".././components/SkillsBanner/SkillsBanner.jsx";
+import TypingAnimation from ".././components/TypingAnimation/TypingAnimation";
+import SkillsBanner from ".././components/SkillsBanner/SkillsBanner";
 import styles from './page.module.css';
 
 //About Page

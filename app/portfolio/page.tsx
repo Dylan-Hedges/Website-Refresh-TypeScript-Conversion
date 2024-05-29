@@ -1,5 +1,5 @@
 import ProjectSelection from "../components/ProjectSelection/ProjectSelection";
-import TypingAnimation from ".././components/TypingAnimation/TypingAnimation.jsx";
+import TypingAnimation from ".././components/TypingAnimation/TypingAnimation";
 import styles from './page.module.css';
 
 

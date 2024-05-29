@@ -1,6 +1,6 @@
-import TypingAnimation from "./components/TypingAnimation/TypingAnimation.jsx";
+import TypingAnimation from "./components/TypingAnimation/TypingAnimation";
 import ProjectSelection from "./components/ProjectSelection/ProjectSelection";
-import SkillsBanner from "./components/SkillsBanner/SkillsBanner.jsx";
+import SkillsBanner from "./components/SkillsBanner/SkillsBanner";
 import styles from './page.module.css';
 import Link from 'next/link';
 
