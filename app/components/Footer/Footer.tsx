@@ -7,7 +7,6 @@ export default function Footer(){
             {/*Column 1 - Text*/}
             <div className={styles.textContainer}>
                 <h5>ABOUT</h5>
-                <p>Still works</p>
                 <p>Web & UI Developer specialising in creating interactive and engaging websites and web applications using HTML, CSS, JavaScript & React. I am always open to new opportunities. Reach out to me anytime directly via email or LinkedIn. </p>
             </div>
             {/*Column 2 - Buttons*/}

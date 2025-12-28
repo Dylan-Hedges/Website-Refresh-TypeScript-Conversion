@@ -27,7 +27,7 @@ export const projectsData: IProjectsData[] = [
       image: "/images/dev-quiz-thumb.png",
       tag: ["All", "Web"],
       projectPageURL: "/portfolio/devquiz",
-      projectURL: 'https://dev-quiz-application-e66b5490dae6.herokuapp.com/',
+      projectURL: 'https://dev-quiz.dylanhedges.com/',
       bullets: [
           'Interactive Quiz application ',
           'Developed using React, Node, Express & ChatGPT API',
@@ -61,7 +61,7 @@ export const projectsData: IProjectsData[] = [
       image: "/images/survey-send-thumb.png",
       tag: ["All", "Web"],
       projectPageURL: "/portfolio/surveysend",
-      projectURL: 'https://quiet-coast-41651.herokuapp.com',
+      projectURL: 'https://surveysend.dylanhedges.com/',
       bullets: [
           'Email Survey web application',
           'Developed using React, Redux, MongoDB, Node, Express, Stripe, SendGrid',
